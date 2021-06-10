@@ -130,6 +130,7 @@ async function changeOfAccount(newAccount){
 }
 
 async function UIDisplayData(){
+
     var data = {
         title: "Yield Forecast",
         data: currentAccountProfile
@@ -385,6 +386,9 @@ async function pageOnLoad(){
 
 async function initEthereum(){
     ethereum.autoRefreshOnNetworkChange = false;
+    $("#connectedAccount").click(async function(){
+        await connectToMetaMask();
+    })
 }
 
 async function initContracts(){
