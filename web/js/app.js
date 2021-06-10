@@ -386,6 +386,7 @@ async function pageOnLoad(){
 
 async function initEthereum(){
     ethereum.autoRefreshOnNetworkChange = false;
+    await connectToMetaMask();
     $("#connectedAccount").click(async function(){
         await connectToMetaMask();
     })
