@@ -92,12 +92,12 @@ main();
 
 async function main(){
     await loadABI();
-    //initEthereum();
-    //initChartJS();
-    //await initContracts();
-    //await pageOnLoad();
-    //await retStats();
-    //UIDisplayData();
+    initEthereum();
+    initChartJS();
+    await initContracts();
+    await pageOnLoad();
+    await retStats();
+    UIDisplayData();
 
 }
 
@@ -386,7 +386,6 @@ async function pageOnLoad(){
 
 async function initEthereum(){
     ethereum.autoRefreshOnNetworkChange = false;
-    await connectToMetaMask();
     $("#connectedAccount").click(async function(){
         await connectToMetaMask();
     })
