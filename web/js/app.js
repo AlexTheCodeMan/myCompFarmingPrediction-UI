@@ -92,12 +92,12 @@ main();
 
 async function main(){
     await loadABI();
-    initEthereum();
-    initChartJS();
-    await initContracts();
-    await pageOnLoad();
-    await retStats();
-    UIDisplayData();
+    //initEthereum();
+    //initChartJS();
+    //await initContracts();
+    //await pageOnLoad();
+    //await retStats();
+    //UIDisplayData();
 
 }
 
