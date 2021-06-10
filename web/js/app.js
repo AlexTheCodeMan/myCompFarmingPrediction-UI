@@ -5,10 +5,15 @@ const constants_urls = {
 }
 
 const addresses = {
-    CompFarmingSummaryV3: "0x94A305a4370BA0D59C300f85e9F2E8261874966a"
+    CompFarmingSummaryV3: "0xc1b7f22d0bc15edfed4fccde5dcdd3ceefa9717a"
 }
 
-const targetedBorrowLimitPCT = findGetParameter("max_borrow_limit");
+const targetedBorrowLimitPCT = (() => {
+    const v = findGetParameter("max_borrow_limit");
+    if(v) return v;
+
+    return "1";
+})();
 
 const web3 = new Web3(window.ethereum);
 
