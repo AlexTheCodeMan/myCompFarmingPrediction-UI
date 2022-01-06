@@ -87,8 +87,8 @@ function Asset(array){
     obj["underlyingSymbol_"] = array["underlyingSymbol_"];
     obj["underlyingDecimals_"] = array["underlyingDecimals_"];
     obj["valueInUSD_"] = array["valueInUSD_"];
-    obj["compSpeed_"] = array["compSpeed_"];
-
+    obj["compSupplySpeed_"] = array["compSupplySpeed_"];
+    obj["compBorrowSpeed_"] = array["compBorrowSpeed_"];
     return obj;
 }
 

@@ -5,7 +5,14 @@ const constants_urls = {
 }
 
 const addresses = {
-    CompFarmingSummaryV3: "0xc1b7f22d0bc15edfed4fccde5dcdd3ceefa9717a"
+    CompFarmingSummaryV3: (() => {
+        const v = findGetParameter("contract");
+        if(v) return v;
+
+        return "1";
+    })()
+    // "0xfaAddC93baf78e89DCf37bA67943E1bE8F37Bb8c" // V4
+    // //"0xc1b7f22d0bc15edfed4fccde5dcdd3ceefa9717a" V3 in mainnet
 }
 
 const targetedBorrowLimitPCT = (() => {
@@ -196,7 +203,12 @@ async function UIDisplayData(){
 }
 
 async function retStats(){
-    compPriceInUSD = await getCompPriceInUSD();
+    compPriceInUSD = await (async () => {
+        const v = findGetParameter("comp_price_usd");
+        if(v) return v;
+
+        return await getCompPriceInUSD();
+    })();
 
     //load current account profile
     const accountProfileResultRaw = await getAccountProfile(account);

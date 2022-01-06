@@ -1,0 +1,25 @@
+{
+  "name": "mycompfarmingprediction-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexTheCodeMan/myCompFarmingPrediction-UI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexTheCodeMan/myCompFarmingPrediction-UI/issues"
+  },
+  "homepage": "https://github.com/AlexTheCodeMan/myCompFarmingPrediction-UI#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0"
+  }
+}
